@@ -85,17 +85,23 @@ namespace CPMobile.Service
                 // Build up the data to POST.
                 // List<KeyValuePair<string, string>> postData = new List<KeyValuePair<string, string>>();
 
-                var postData = new StringBuilder();
+               string usuariopostData;
 
 
-                postData.Append("Email:" +email+",");
-                postData.Append("UserName:" + username + ",");
-                postData.Append("FirstName:" + firstname + ",");
-                postData.Append("LastName:" + lastname + ",");
-                postData.Append("Password:" + password + ",");
-                postData.Append("ConfirmPassword:" + confirmpassword);
+               // List<Usuario> usuario = new List<Usuario>();
 
+                var usuario = new Usuario
+                {
+                    Email    = email,
+                    UserName = username,
+                    FirstName = firstname,
+                    LastName = lastname,
+                    Password = password,
+                    ConfirmPassword = confirmpassword
 
+                };
+
+                
                 //postData.Add(new KeyValuePair<string, string>("Email", email));
                 //postData.Add(new KeyValuePair<string, string>("Username", username));
                 //postData.Add(new KeyValuePair<string, string>("FirstName", firstname));
@@ -114,7 +120,7 @@ namespace CPMobile.Service
 
                 try
                 {
-                    var json = JsonConvert.SerializeObject(postData);
+                    var json = JsonConvert.SerializeObject(usuario);
                     var content = new StringContent(json, Encoding.UTF8, "application/json");
 
                     var response = await client.PostAsync("api/account/create", content);
