@@ -26,7 +26,7 @@ namespace CPMobile.Views
             BindingContext = _viewModel;
            // BindingContext = viewModel;
             //BackgroundColor = Color.Black;
-            Title = "CodeProject";
+            Title = "FindMe";
             NavigationPage.SetHasNavigationBar(this, true);
             NavigationPage.SetHasBackButton(this, false);
             relativeLayout = new RelativeLayout

@@ -192,6 +192,83 @@ namespace CPMobile.Service
             }
         }
 
+        public async Task<MyProfile> GetMyProfile(string username, string password)
+        {
+            var loginToken = Settings.AuthLoginToken;
+
+            if (!string.IsNullOrEmpty(loginToken))
+            {
+                using (var client = new HttpClient())
+                {
+                    client.BaseAddress = new Uri(baseUrl);
+                    client.DefaultRequestHeaders.Accept.Clear();
+                    client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+
+                    List<KeyValuePair<string, string>> postData = new List<KeyValuePair<string, string>>();
+
+                    postData.Add(new KeyValuePair<string, string>("Authorization", "Bearer " + loginToken));
+                    postData.Add(new KeyValuePair<string, string>("username", username));
+                    postData.Add(new KeyValuePair<string, string>("password", password));
+                    FormUrlEncodedContent content = new FormUrlEncodedContent(postData);
+
+                    HttpResponseMessage response = await client.GetAsync("api/account/user/" + username);
+
+                    string jsonString = await response.Content.ReadAsStringAsync();
+                    MyProfile responseData = JsonHelper.Deserialize<MyProfile>(jsonString);
+
+                    return responseData;
+                }
+            }
+            else
+            {
+                return null;
+            }
+            //throw new NotImplementedException();
+        }
+
+        //public async Task<MyProfile> GetMyProfile(string username, string password)
+        //{
+        //    var loginToken = Settings.AuthLoginToken;
+
+        //    if (!string.IsNullOrEmpty(loginToken))
+        //    {
+        //        using (var client = new HttpClient())
+        //        {
+        //            client.BaseAddress = new Uri(baseUrl);
+        //            client.DefaultRequestHeaders.Accept.Clear();
+        //            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+        //            // Add the Authorization header with the AccessToken.
+        //            client.DefaultRequestHeaders.Add("Authorization", "Bearer " + loginToken);
+        //            client.DefaultRequestHeaders.Add("username", username);
+        //            client.DefaultRequestHeaders.Add("password", password);
+
+        //            // create the URL string.
+        //            string url = string.Format("api/account/user/" + username);
+
+        //            // make the request
+        //            HttpResponseMessage response = await client.GetAsync(url);
+        //            // make the request
+
+
+        //            // parse the response and return the data.
+        //            string jsonString = await response.Content.ReadAsStringAsync();
+        //            MyProfile responseData = JsonHelper.Deserialize<MyProfile>(jsonString);
+
+
+        //            //await BlobCache.LocalMachine.InsertObject<MyProfile>("DefaultArticle", responseData, DateTimeOffset.Now.AddDays(1));
+        //            // await dataStorageService.Save_Value("MyProfile", responseData);
+
+        //            return responseData;
+        //        }
+        //    }
+        //    else
+        //    {
+        //        return null;
+        //    }
+        //    //throw new NotImplementedException();
+        //}
 
         public async Task Init()
         {
@@ -320,46 +397,7 @@ namespace CPMobile.Service
 
        
 
-        public async Task<MyProfile> GetMyProfile()
-        {
-            var loginToken = Settings.AuthLoginToken;
-
-            if (!string.IsNullOrEmpty(loginToken))
-            {
-                using (var client = new HttpClient())
-                {
-                    client.BaseAddress = new Uri(baseUrl);
-                    client.DefaultRequestHeaders.Accept.Clear();
-                    client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-
-                    // Add the Authorization header with the AccessToken.
-                    client.DefaultRequestHeaders.Add("Authorization", "Bearer " + loginToken);
-
-                    // create the URL string.
-                    string url = string.Format("v1/My/Profile");
-
-                    // make the request
-                    HttpResponseMessage response = await client.GetAsync(url);
-                    // make the request
-
-
-                    // parse the response and return the data.
-                    string jsonString = await response.Content.ReadAsStringAsync();
-                    MyProfile responseData = JsonHelper.Deserialize<MyProfile>(jsonString);
-
-
-                    //await BlobCache.LocalMachine.InsertObject<MyProfile>("DefaultArticle", responseData, DateTimeOffset.Now.AddDays(1));
-                    // await dataStorageService.Save_Value("MyProfile", responseData);
-
-                    return responseData;
-                }
-            }
-            else
-            {
-                return null;
-            }
-            //throw new NotImplementedException();
-        }
+       
 
         /// <summary>
         /// Gets the page of Articles.

@@ -17,7 +17,7 @@ namespace CPMobile.ViewModels
         public ProfileViewModel ()
         {
             cpFeed = DependencyService.Get<ICPFeeds>();
-            Title = "Moments";
+            Title = "FindMe";
             Icon = "icon.png";
             Profile = new ObservableCollection<MyProfile>();
         }
@@ -73,7 +73,7 @@ namespace CPMobile.ViewModels
 
             try
             {
-                 myProfile = await cpFeed.GetMyProfile();
+                 myProfile = await cpFeed.GetMyProfile("stanley_alves","cqzp798371@");
                  this.Avatar = myProfile.avatar;
                  this.DisplayName = myProfile.displayName;
                  Profile.Add(myProfile);

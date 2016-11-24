@@ -1,5 +1,6 @@
 ﻿using Xamarin.Forms;
 using CPMobile.Helper;
+using Moments.Views;
 
 namespace CPMobile.Views
 {
@@ -39,9 +40,11 @@ namespace CPMobile.Views
             };
             var section = new TableSection()
             {
-                new MenuCell {Text = "Home",Host= this,ImageSrc="home_black.png"},
-                new MenuCell {Text = "Favorites",Host= this,ImageSrc="star_black.png"},
-                new MenuCell {Text = "About",Host= this,ImageSrc="about_black.png"},
+                new MenuCell {Text = "Mapa",Host= this,ImageSrc="menu_venue.png"},
+                new MenuCell {Text = "Lugares",Host= this,ImageSrc="menu_current_trip.png"},
+                new MenuCell {Text = "Conversa",Host= this,ImageSrc="menu_sponsors.png"},
+                new MenuCell {Text = "Configurações",Host= this,ImageSrc="menu_settings.png"},
+                new MenuCell {Text = "Sobre",Host= this,ImageSrc="menu_profile.png"},
             };
             
             var root = new TableRoot() { section };
@@ -88,25 +91,50 @@ namespace CPMobile.Views
  
         }
 
-        NavigationPage home, About, favorites;
+        //NavigationPage home, About, favorites;
+
+        NavigationPage mapa, lugares, conversa,configuracoes,sobre;
         public void Selected(string item)
         {
 
             switch (item)
             {
-                case "Home":
-                    if (home == null)
-                        home = new NavigationPage(new MainListPage()) { BarBackgroundColor = App.BrandColor, BarTextColor = Color.White };
-                    rootPage.Detail = home;
+                case "Mapa":
+
+                    sobre = new NavigationPage(new MapaPage()) { BarBackgroundColor = App.BrandColor, BarTextColor = Color.White };
+                    rootPage.Detail = mapa;
                     break;
-                case "Favorites":
-                    favorites = new NavigationPage(new FavoriteListPage()) { BarBackgroundColor = App.BrandColor, BarTextColor = Color.White };
-                    rootPage.Detail = favorites;
+
+                case "Lugares":
+
+
                     break;
-                case "About":
-                    About = new NavigationPage(new AboutPage()) { BarBackgroundColor = App.BrandColor, BarTextColor = Color.White };
-                    rootPage.Detail = About;
+                case "Conversa":
+
+
                     break;
+                case "Configuração":
+
+
+                    break;
+
+               
+
+
+                    //case "Home":
+                    //    if (home == null)
+                    //        home = new NavigationPage(new MainListPage()) { BarBackgroundColor = App.BrandColor, BarTextColor = Color.White };
+                    //    rootPage.Detail = home;
+                    //    break;
+                    //case "Favorites":
+                    //    favorites = new NavigationPage(new FavoriteListPage()) { BarBackgroundColor = App.BrandColor, BarTextColor = Color.White };
+                    //    rootPage.Detail = favorites;
+                    //    break;
+
+                    case "Sobre":
+                    sobre = new NavigationPage(new AboutPage()) { BarBackgroundColor = App.BrandColor, BarTextColor = Color.White };
+                        rootPage.Detail = sobre;
+                        break;
             };
             rootPage.IsPresented = false;  // close the slide-out
         }

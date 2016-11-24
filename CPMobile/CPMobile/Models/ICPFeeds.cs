@@ -16,7 +16,7 @@ namespace CPMobile.Models
         Task<bool> PostIncluirUsuario(string email, string username, string firstname, string lastname, string password,
             string confirmpassword);
 
-        Task<MyProfile> GetMyProfile();
+        Task<MyProfile> GetMyProfile(string username, string password);
 
         Task<CPFeed> MyArticles(int page);
 

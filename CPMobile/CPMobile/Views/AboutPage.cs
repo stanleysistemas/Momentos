@@ -16,7 +16,7 @@ namespace CPMobile.Views
             BackgroundColor = Color.White;
             var License = new Label
             {
-                Text = "The Code Project Open License (CPOL) 1.02",
+                Text = "FindMe",
                 BackgroundColor = App.BrandColor,
                 Font = Font.SystemFontOfSize(30),
                 WidthRequest = 150,
@@ -25,7 +25,7 @@ namespace CPMobile.Views
 
             var Author = new Label
             {
-                Text = "Author - Rohit Asthana",
+                Text = "Autores - Stanley Alves e Fábio Jansen",
                 BackgroundColor = App.BrandColor,
                 Font = Font.SystemFontOfSize(15),
                 WidthRequest = 50,

@@ -29,6 +29,7 @@ namespace CPMobile.Views
 
             };
 
+
             var backgroundImage = new Image()
             {
                 Aspect = Aspect.Fill,

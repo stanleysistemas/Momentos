@@ -10,7 +10,7 @@ namespace CPMobile
 	{
 		// https://gist.github.com/ChaseFlorell/32e1f5c1187d2a7e4835
 		public static App Current;
-		public static Color BrandColor = Color.FromHex("#FF9800");
+		public static Color BrandColor = Color.FromHex("#F57C00");
 		public App()
 		{
 			// The root page of your application
@@ -18,6 +18,7 @@ namespace CPMobile
 			//Current = this;
 		   // MainPage = new Profile();
 			BlobCache.ApplicationName = "FindMe";
+			
 
 			var authLoginToken = Settings.AuthLoginToken;
 

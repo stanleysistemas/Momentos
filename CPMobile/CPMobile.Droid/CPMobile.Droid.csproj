@@ -7,8 +7,8 @@
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Moments.Droid</RootNamespace>
-    <AssemblyName>Moments.Droid</AssemblyName>
+    <RootNamespace>FindMe.Droid</RootNamespace>
+    <AssemblyName>FindMe.Droid</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <AndroidApplication>true</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
@@ -124,6 +124,7 @@
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Renderers\RootNavigationRenderer.cs" />
+    <Compile Include="Services\GPSService .cs" />
     <Compile Include="SplashActivity.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -199,6 +200,20 @@
     <AndroidResource Include="Resources\drawable\header_blue.png" />
     <AndroidResource Include="Resources\drawable\header1.jpg" />
     <AndroidResource Include="Resources\drawable\Moments.jpg" />
+    <AndroidResource Include="Resources\drawable\ic_evals.png" />
+    <AndroidResource Include="Resources\drawable\ic_home_1.png" />
+    <AndroidResource Include="Resources\drawable\ic_map_black_18dp.png" />
+    <AndroidResource Include="Resources\drawable\icon_blog.png" />
+    <AndroidResource Include="Resources\drawable\icon_website.png" />
+    <AndroidResource Include="Resources\drawable\menu_current_trip.png" />
+    <AndroidResource Include="Resources\drawable\menu_events.png" />
+    <AndroidResource Include="Resources\drawable\menu_feed.png" />
+    <AndroidResource Include="Resources\drawable\menu_info.png" />
+    <AndroidResource Include="Resources\drawable\menu_plan.png" />
+    <AndroidResource Include="Resources\drawable\menu_profile.png" />
+    <AndroidResource Include="Resources\drawable\menu_settings.png" />
+    <AndroidResource Include="Resources\drawable\menu_sponsors.png" />
+    <AndroidResource Include="Resources\drawable\menu_venue.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CPMobile\CPMobile.csproj">

@@ -14,7 +14,7 @@ namespace CPMobile.Views
         public Profile(MyProfile myProfile = null)
         {
             
-            Title = "Profile";
+            Title = "Sobre";
             NavigationPage.SetHasNavigationBar(this, true);
             BackgroundColor = Color.White;
 

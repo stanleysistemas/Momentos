@@ -9,9 +9,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Android.Runtime.ResourceDesignerAttribute("Moments.Droid.Resource", IsApplication=true)]
+[assembly: global::Android.Runtime.ResourceDesignerAttribute("FindMe.Droid.Resource", IsApplication=true)]
 
-namespace Moments.Droid
+namespace FindMe.Droid
 {
 	
 	
@@ -26,9 +26,9 @@ namespace Moments.Droid
 		
 		public static void UpdateIdValues()
 		{
-			global::Splat.Resource.String.library_name = global::Moments.Droid.Resource.String.library_name;
-			global::Xamarin.Forms.Platform.Resource.String.ApplicationName = global::Moments.Droid.Resource.String.ApplicationName;
-			global::Xamarin.Forms.Platform.Resource.String.Hello = global::Moments.Droid.Resource.String.Hello;
+			global::Splat.Resource.String.library_name = global::FindMe.Droid.Resource.String.library_name;
+			global::Xamarin.Forms.Platform.Resource.String.ApplicationName = global::FindMe.Droid.Resource.String.ApplicationName;
+			global::Xamarin.Forms.Platform.Resource.String.Hello = global::FindMe.Droid.Resource.String.Hello;
 		}
 		
 		public partial class Attribute
@@ -109,49 +109,91 @@ namespace Moments.Droid
 			public const int home_black = 2130837516;
 			
 			// aapt resource value: 0x7f02000d
-			public const int icon = 2130837517;
+			public const int ic_evals = 2130837517;
 			
 			// aapt resource value: 0x7f02000e
-			public const int linkedin = 2130837518;
+			public const int ic_home_1 = 2130837518;
 			
 			// aapt resource value: 0x7f02000f
-			public const int LoginScreen = 2130837519;
+			public const int ic_map_black_18dp = 2130837519;
 			
 			// aapt resource value: 0x7f020010
-			public const int menu = 2130837520;
+			public const int icon = 2130837520;
 			
 			// aapt resource value: 0x7f020011
-			public const int Moments = 2130837521;
+			public const int icon_blog = 2130837521;
 			
 			// aapt resource value: 0x7f020012
-			public const int offline = 2130837522;
+			public const int icon_website = 2130837522;
 			
 			// aapt resource value: 0x7f020013
-			public const int online = 2130837523;
+			public const int linkedin = 2130837523;
 			
 			// aapt resource value: 0x7f020014
-			public const int orange = 2130837524;
+			public const int LoginScreen = 2130837524;
 			
 			// aapt resource value: 0x7f020015
-			public const int pin = 2130837525;
+			public const int menu = 2130837525;
 			
 			// aapt resource value: 0x7f020016
-			public const int pindrop = 2130837526;
+			public const int menu_current_trip = 2130837526;
 			
 			// aapt resource value: 0x7f020017
-			public const int settings = 2130837527;
+			public const int menu_events = 2130837527;
 			
 			// aapt resource value: 0x7f020018
-			public const int star = 2130837528;
+			public const int menu_feed = 2130837528;
 			
 			// aapt resource value: 0x7f020019
-			public const int star_black = 2130837529;
+			public const int menu_info = 2130837529;
 			
 			// aapt resource value: 0x7f02001a
-			public const int tap = 2130837530;
+			public const int menu_plan = 2130837530;
 			
 			// aapt resource value: 0x7f02001b
-			public const int twitter = 2130837531;
+			public const int menu_profile = 2130837531;
+			
+			// aapt resource value: 0x7f02001c
+			public const int menu_settings = 2130837532;
+			
+			// aapt resource value: 0x7f02001d
+			public const int menu_sponsors = 2130837533;
+			
+			// aapt resource value: 0x7f02001e
+			public const int menu_venue = 2130837534;
+			
+			// aapt resource value: 0x7f02001f
+			public const int Moments = 2130837535;
+			
+			// aapt resource value: 0x7f020020
+			public const int offline = 2130837536;
+			
+			// aapt resource value: 0x7f020021
+			public const int online = 2130837537;
+			
+			// aapt resource value: 0x7f020022
+			public const int orange = 2130837538;
+			
+			// aapt resource value: 0x7f020023
+			public const int pin = 2130837539;
+			
+			// aapt resource value: 0x7f020024
+			public const int pindrop = 2130837540;
+			
+			// aapt resource value: 0x7f020025
+			public const int settings = 2130837541;
+			
+			// aapt resource value: 0x7f020026
+			public const int star = 2130837542;
+			
+			// aapt resource value: 0x7f020027
+			public const int star_black = 2130837543;
+			
+			// aapt resource value: 0x7f020028
+			public const int tap = 2130837544;
+			
+			// aapt resource value: 0x7f020029
+			public const int twitter = 2130837545;
 			
 			static Drawable()
 			{
